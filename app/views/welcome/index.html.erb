@@ -1,5 +1,25 @@
-<h1>Welcome to CrowdFlower, you amazing best!</h1>
-<h2>Get familiar with us by creating your first CrowdFlower job</h2>
 <section>
+  <h1>Welcome to CrowdFlower, you amazing best!</h1>
+  <% if @use_cases.present? %>
+    <h2>Get familiar with us by creating your first CrowdFlower job</h2>
 
+    <div class='use-cases-wrapper'>
+      <strong>What would you like to do?</strong>
+      <div class='row'>
+
+        <% @use_cases.each do |use_case| %>
+          <div class='col-sm-3 pull-left use-case'>
+            <%= link_to use_case.key, class: 'use-case-link' do %>
+              <%= image_tag use_case.image, alt: use_case.name, class: 'use-case-image' %>
+              <div class='use-case-name'><%= use_case.name %></div>
+            <% end %>
+          </div>
+        <% end %>
+
+      </div>
+    </div>
+
+  <% else %>
+    <h2>Uses cases information is not available</h2>
+  <% end %>
 </section>
