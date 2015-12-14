@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Use Cases</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= stylesheet_link_tag 'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div class='container'>
-    <nav class='user-nav'>
-      <%= link_to 'Ninja Unicorn', '#', class: 'nav-link pull-right' %>
-    </nav>
-    <%= yield %>
-  </div>
-</body>
-<footer>
-  <%= link_to 'Help', '#' %>
-  <%= link_to 'Email us', '#' %>
-  <%= link_to 'Updgrade your plan', '#' %>
-  <%= link_to '●●●', '#' %>
-</footer>
+  <head>
+    <title>Use Cases</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class='container'>
+      <nav class='user-nav'>
+        <%= link_to 'Ninja Unicorn', '#', class: 'nav-link pull-right' %>
+      </nav>
+      <%= yield %>
+    </div>
+  </body>
+  <footer>
+    <div class='container'>
+      <%= link_to 'Help', '#', class: 'footer-link' %>
+      <%= link_to 'Email us', '#', class: 'footer-link' %>
+      <%= link_to 'Updgrade your plan', '#', class: 'footer-link' %>
+      <%= link_to '●●●', '#', class: 'footer-link' %>
+    </div>
+  </footer>
 </html>
