@@ -1,0 +1,13 @@
+.user-nav {
+  padding: 1rem 0.5rem;
+}
+
+.nav-link {
+  color: $silver;
+  font-size: 1.2rem;
+
+  &:hover {
+    color: darken($silver, 15%);
+    text-decoration: none;
+  }
+}
