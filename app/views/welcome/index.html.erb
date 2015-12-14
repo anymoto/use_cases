@@ -7,12 +7,16 @@
       <strong>What would you like to do?</strong>
       <div class='row'>
 
-        <% @use_cases.each do |use_case| %>
-          <div class='col-sm-3 pull-left use-case'>
-            <%= link_to use_case.key, class: 'use-case-link' do %>
-              <%= image_tag use_case.image, alt: use_case.name, class: 'use-case-image' %>
-              <div class='use-case-name'><%= use_case.name %></div>
-            <% end %>
+        <% @use_cases.each_with_index do |use_case, index| %>
+          <% if index < 8 %>
+            <div class='col-sm-3 pull-left use-case'>
+          <% else %>
+            <div class='col-sm-3 pull-left use-case js-use-case-hidden'>
+          <% end %>
+          <%= link_to use_case.key, class: 'use-case-link' do %>
+            <%= image_tag use_case.image, alt: use_case.name, class: 'use-case-image' %>
+            <div class='use-case-name'><%= use_case.name %></div>
+          <% end %>
           </div>
         <% end %>
 
@@ -20,10 +24,17 @@
     </div>
 
   <% else %>
-    <h2>Uses cases information is not available</h2>
+    <h2>Uses cases information is not available.</h2>
   <% end %>
 </section>
+
+<% if @use_cases.length > 8 %>
+  <%= link_to 'See more', '#', class: 'base-link pull-right js-toggle-content' %>
+  <div class='clearfix'></div>
+<% end %>
+
 <hr>
+
 <article>
   <row>
     <div class='col-sm-4 side-navigation'>
@@ -32,10 +43,15 @@
       <%= link_to 'View example case studies', '#', class: 'side-nav-link' %>
       <%= link_to 'Watch training videos', '#', class: 'side-nav-link' %>
     </div>
-    <div class='col-sm-8 side-navigation'>
+    <div class='col-sm-8'>
       <h3>Don't see what you're looking for?</h3>
       <p>Tell us what your data needs - we'll get back to you with a recommendation</p>
-      <div class: 'text-area'>
+      <div class='text-area-container'>
+        <%= text_area_tag 'text-area', nil, class: 'text-area',
+          placeholder: 'Describe your data goals in a short summary' %>
+        <p class='upload-heading pull-left'>Attach a sample of your data (optional)</p>
+        <div class='clearfix'></div>
+        <%= link_to 'Upload File', '#', class: 'primary-button js-upload-button' %>
       </div>
     </div>
   </row>

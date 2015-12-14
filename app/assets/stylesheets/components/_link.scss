@@ -1,0 +1,10 @@
+.base-link {
+  color: $silver;
+  display: block;
+  font-size: 1.2rem;
+
+  &:hover, &:focus {
+    color: darken($silver, 15%);
+    text-decoration: none;
+  }
+}

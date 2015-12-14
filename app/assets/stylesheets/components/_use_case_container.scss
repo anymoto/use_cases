@@ -1,6 +1,6 @@
 .use-cases-wrapper {
   font-size: 1.4rem;
-  margin-top: 3.2rem;
+  margin: 3.2rem 0 1rem;
 }
 
 .use-case {
@@ -34,4 +34,8 @@
   &:hover {
     text-decoration: none;
   }
+}
+
+.js-use-case-hidden {
+  display: none;
 }
