@@ -1,0 +1,25 @@
+<article>
+  <h3>Don't see what you're looking for?</h3>
+  <p>Tell us what your data needs - we'll get back to you with a recommendation</p>
+  <%= form_tag do %>
+    <div class='text-area-container'>
+      <span class='js-text-warning hidden'>Message should be 140 characters long max.</span>
+
+      <%= text_area_tag 'text-area', nil,
+          class: 'js-text-area',
+          placeholder: 'Describe your data goals in a short summary' %>
+
+      <p class='upload-heading pull-left'>Attach a sample of your data (optional)</p>
+      <div class='clearfix'></div>
+
+      <%= link_to 'Upload File', '#', class: 'js-upload-button pull-left' %>
+      <div id="sampleDropzone" class="dropzone">
+        <div class="dz-default dz-message">or drop files here</div>
+      </div>
+      <div class='clearfix'></div>
+    </div>
+
+    <%= link_to 'Send', '#', class: 'js-submit-form-button pull-right disabled' %>
+    <div class='clearfix'></div>
+  <% end %>
+</article>

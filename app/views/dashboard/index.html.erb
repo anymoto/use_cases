@@ -38,29 +38,14 @@
 
 <hr>
 
-<row>
-  <div class='col-sm-4 side-navigation'>
-    <%= render 'side_navigation' %>
+<div class='row'>
+  <div class='col-sm-4'>
+    <%= render 'shared/side_navigation' %>
   </div>
   <div class='col-sm-8'>
-  <article>
-      <h3>Don't see what you're looking for?</h3>
-      <p>Tell us what your data needs - we'll get back to you with a recommendation</p>
-
-      <div class='text-area-container'>
-        <span class='text-warning hidden'>Message should be 140 characters long max.</span>
-        <%= text_area_tag 'text-area', nil, class: 'text-area',
-          placeholder: 'Describe your data goals in a short summary' %>
-        <p class='upload-heading pull-left'>Attach a sample of your data (optional)</p>
-        <div class='clearfix'></div>
-        <%= link_to 'Upload File', '#', class: 'primary-button pull-left' %>
-        <form action='/file-upload' class='dropzone' id='sampleDropzone'></form>
-      </div>
-
-      <%= link_to 'Send', '#', class: 'submit-form-button pull-right disabled' %>
-  </article>
+    <%= render 'shared/data_summary_form' %>
   </div>
-</row>
+</div>
 
 <%= javascript_tag do %>
   $(document).ready(function() {
