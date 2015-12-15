@@ -25,4 +25,9 @@
     color: $white;
     text-decoration: none;
   }
+
+  &.disabled {
+    background-color: $hawkes-blue;
+    cursor: default;
+  }
 }

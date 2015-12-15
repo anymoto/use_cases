@@ -29,7 +29,10 @@
 </section>
 
 <% if @use_cases.length > 8 %>
-  <%= link_to 'See more', '#', class: 'base-link pull-right js-toggle-content' %>
+  <%= link_to '#', class: 'base-link pull-right js-toggle-content' do %>
+    <span>See more</span>
+    <span class='carrot pull-right'></span>
+  <% end %>
   <div class='clearfix'></div>
 <% end %>
 
@@ -46,7 +49,9 @@
     <div class='col-sm-8'>
       <h3>Don't see what you're looking for?</h3>
       <p>Tell us what your data needs - we'll get back to you with a recommendation</p>
+
       <div class='text-area-container'>
+        <span class='text-warning hidden'>Message should be 140 characters long max.</span>
         <%= text_area_tag 'text-area', nil, class: 'text-area',
           placeholder: 'Describe your data goals in a short summary' %>
         <p class='upload-heading pull-left'>Attach a sample of your data (optional)</p>
@@ -54,7 +59,8 @@
         <%= link_to 'Upload File', '#', class: 'primary-button pull-left' %>
         <form action='/file-upload' class='dropzone' id='sampleDropzone'></form>
       </div>
-      <%= link_to 'Send', '#', class: 'submit-form-button pull-right' %>
+
+      <%= link_to 'Send', '#', class: 'submit-form-button pull-right disabled' %>
     </div>
   </row>
 </article>
