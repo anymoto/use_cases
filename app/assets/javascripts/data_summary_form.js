@@ -3,29 +3,30 @@ window.DataSummaryForm = function() {
     e.preventDefault();
   });
 
-  Dropzone.options.sampleDropzone = {
-    dictDefaultMessage: 'or drop files here'
-  }
-
-  $('.submit-form-button').click(function(e) {
+  $('.js-submit-form-button').click(function(e) {
     e.preventDefault();
     if ($(this).hasClass('disabled')) {
       return false;
     }
   });
 
-  $('.text-area').keyup(function(e) {
+  $('.js-text-area').keyup(function(e) {
     length = $(this).val().length;
+
     if (length > 0 && length < 141) {
-      $('.submit-form-button').removeClass('disabled');
-      $('.text-warning').addClass('hidden');
+      $('.js-submit-form-button').removeClass('disabled');
+      $('.js-text-warning').addClass('hidden');
     } else {
-      $('.submit-form-button').addClass('disabled');
+      $('.js-submit-form-button').addClass('disabled');
     }
 
     if (length > 140) {
-      $('.text-warning').removeClass('hidden');
+      $('.js-text-warning').removeClass('hidden');
     }
   });
+
+  Dropzone.options.sampleDropzone = {
+    url: '/file-upload'
+  }
 };
 
