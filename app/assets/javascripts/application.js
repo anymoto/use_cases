@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require_tree .
 //= require dashboard
+//= require data_summary_form
 //= require lib/dropzone.min
