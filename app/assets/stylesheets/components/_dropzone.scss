@@ -1,0 +1,14 @@
+.dropzone {
+  background-color: $porcelain;
+  border: 1px dashed $silver;
+  border-radius: 4px;
+  display: inline-block;
+  margin-left: 0.5rem;
+  min-height: 3rem;
+  padding: 0.5rem;
+
+  .dz-message {
+    margin: 0.6rem;
+  }
+}
+

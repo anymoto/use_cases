@@ -13,4 +13,8 @@ $(document).ready( function() {
   $('.js-upload-button').click(function(e) {
     e.preventDefault();
   });
+
+  Dropzone.options.sampleDropzone = {
+    dictDefaultMessage: 'or drop files here'
+  }
 });

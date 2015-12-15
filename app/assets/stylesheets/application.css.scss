@@ -1,5 +1,6 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+@import 'lib/dropzone.min';
 @import 'utilities/variables';
 @import 'base/base';
 @import 'layout/layout';
@@ -10,4 +11,4 @@
 @import 'components/use_case_container';
 @import 'components/text_area';
 @import 'components/button';
-@import 'lib/dropzone.min';
+@import 'components/dropzone';
