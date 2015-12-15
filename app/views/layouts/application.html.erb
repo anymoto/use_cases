@@ -9,21 +9,9 @@
   </head>
   <body>
     <div class='container'>
-      <nav class='user-nav'>
-        <%= link_to '#', class: 'nav-link pull-right' do %>
-          <span>Ninja Unicorn</span>
-          <span class='caret pull-right'></span>
-        <% end %>
-      </nav>
+      <%= render 'navigation' %>
       <%= yield %>
     </div>
   </body>
-  <footer>
-    <div class='container'>
-      <%= link_to 'Help', '#', class: 'footer-link' %>
-      <%= link_to 'Email us', '#', class: 'footer-link' %>
-      <%= link_to 'Upgrade your plan', '#', class: 'footer-link' %>
-      <%= link_to '●●●', '#', class: 'footer-link' %>
-    </div>
-  </footer>
+  <%= render 'footer' %>
 </html>
