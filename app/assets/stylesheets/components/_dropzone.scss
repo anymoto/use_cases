@@ -10,5 +10,9 @@
   .dz-message {
     margin: 0.6rem;
   }
+
+  &:hover {
+    background-color: lighten($porcelain, 10%);
+  }
 }
 

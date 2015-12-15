@@ -51,8 +51,10 @@
           placeholder: 'Describe your data goals in a short summary' %>
         <p class='upload-heading pull-left'>Attach a sample of your data (optional)</p>
         <div class='clearfix'></div>
-        <%= link_to 'Upload File', '#', class: 'primary-button js-upload-button' %>
+        <%= link_to 'Upload File', '#', class: 'primary-button pull-left' %>
+        <form action='/file-upload' class='dropzone' id='sampleDropzone'></form>
       </div>
+      <%= link_to 'Send', '#', class: 'submit-form-button pull-right' %>
     </div>
   </row>
 </article>
