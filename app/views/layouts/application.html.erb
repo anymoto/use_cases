@@ -10,7 +10,10 @@
   <body>
     <div class='container'>
       <nav class='user-nav'>
-        <%= link_to 'Ninja Unicorn', '#', class: 'nav-link pull-right' %>
+        <%= link_to '#', class: 'nav-link pull-right' do %>
+          <span>Ninja Unicorn</span>
+          <span class='caret pull-right'></span>
+        <% end %>
       </nav>
       <%= yield %>
     </div>

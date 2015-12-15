@@ -7,7 +7,7 @@
   color: $silver;
   font-size: 1.2rem;
 
-  &:hover {
+  &:hover, &:focus {
     color: darken($silver, 15%);
     text-decoration: none;
   }

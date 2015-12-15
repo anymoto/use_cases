@@ -8,7 +8,7 @@ $(document).ready( function() {
         e.target.innerHTML = 'See more';
       }
     });
-    $('.carrot').toggleClass('up');
+    $('.caret').toggleClass('up');
   });
 
   $('.js-upload-button').click(function(e) {
