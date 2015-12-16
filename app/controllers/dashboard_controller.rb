@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
   def index
-    @use_cases = UseCasesRepository.retrieve
+    @use_cases = UseCasesService.new.retrieve
   end
 end
