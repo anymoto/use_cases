@@ -6,7 +6,7 @@ module UseCasesHelper
   end
 
   def render_link(length)
-    if length < 8
+    if length <= 8
       'hidden'
     end
   end
