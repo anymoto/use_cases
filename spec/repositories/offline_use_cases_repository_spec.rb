@@ -3,6 +3,10 @@ require 'rails_helper'
 describe OfflineUseCasesRepository do
   describe '#retrieve' do
     context 'when file exists and it\'s valid' do
+      let(:data) { { "use_cases" => [{ "name" => "test" , "description" => "test" }] }.to_json }
+
+      before { File.stub(read: data) }
+
       it 'retrieves an array with data' do
         result = subject.retrieve
         expect(result).not_to be_empty
@@ -10,15 +14,10 @@ describe OfflineUseCasesRepository do
     end
 
     context 'when file exists but it\'s not valid' do
-      let(:data) { {:name => "test" , :description => "test"}.to_json }
+      let(:data) { { "use_cases" => [] }.to_json }
 
-      it 'retrieves an empty array' do
-        result = subject.retrieve
-        expect(result).to be_empty
-      end
-    end
+      before { File.stub(read: data) }
 
-    context 'when file doesn\'t exist' do
       it 'retrieves an empty array' do
         result = subject.retrieve
         expect(result).to be_empty
