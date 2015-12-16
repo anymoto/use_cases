@@ -1,7 +1,9 @@
 <section>
   <h1>Welcome to CrowdFlower, you amazing best!</h1>
 
-  <% if @use_cases.present? %>
+  <% if @use_cases.empty? %>
+    <h2>Uses cases information is not available.</h2>
+  <% else %>
     <h2>Get familiar with us by creating your first CrowdFlower job</h2>
 
     <div class='use-cases-wrapper'>
@@ -19,9 +21,6 @@
 
       </div>
     </div>
-
-  <% else %>
-    <h2>Uses cases information is not available.</h2>
   <% end %>
 
 </section>
