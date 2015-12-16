@@ -3,6 +3,7 @@ window.DataSummaryForm = function() {
     e.preventDefault();
   });
 
+  // Handles the submit button state
   $('.js-submit-form-button').click(function(e) {
     e.preventDefault();
     if ($(this).hasClass('disabled')) {
@@ -10,6 +11,7 @@ window.DataSummaryForm = function() {
     }
   });
 
+  // Handles the textarea state
   $('.js-text-area').keyup(function(e) {
     length = $(this).val().length;
 
@@ -20,11 +22,14 @@ window.DataSummaryForm = function() {
       $('.js-submit-form-button').addClass('disabled');
     }
 
+    // Displays a warning message if the text length is > 140 characters
     if (length > 140) {
       $('.js-text-warning').removeClass('hidden');
     }
   });
 
+
+  // Dropzone plugin config
   Dropzone.options.sampleDropzone = {
     url: '/file-upload'
   }
