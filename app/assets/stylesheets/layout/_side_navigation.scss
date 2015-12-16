@@ -1,11 +1,5 @@
 .side-nav-link {
-  color: $cerulean;
+  @include link-color($cerulean);
   display: block;
-  font-size: 1.2rem;
   margin-bottom: 0.4rem;
-
-  &:hover, &:focus {
-    color: darken($cerulean, 15%);
-    text-decoration: none;
-  }
 }

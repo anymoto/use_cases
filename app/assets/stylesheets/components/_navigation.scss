@@ -4,11 +4,5 @@
 }
 
 .nav-link {
-  color: $silver;
-  font-size: 1.2rem;
-
-  &:hover, &:focus {
-    color: darken($silver, 15%);
-    text-decoration: none;
-  }
+  @include link-color($silver);
 }

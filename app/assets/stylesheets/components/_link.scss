@@ -1,12 +1,5 @@
-.base-link {
-  color: $silver;
-  display: block;
+.link {
   font-size: 1.2rem;
-
-  &:hover, &:focus {
-    color: darken($silver, 15%);
-    text-decoration: none;
-  }
 }
 
 .caret {
@@ -17,9 +10,10 @@
   margin: 0.5rem 0 0 0.5rem;
   width: 0;
 
-  &.up {
-    border-width: 0 4px 5px 4px;
-    border-color: transparent transparent $silver transparent;
-  }
+}
+
+.js-caret.up {
+  border-width: 0 4px 5px 4px;
+  border-color: transparent transparent $silver transparent;
 }
 

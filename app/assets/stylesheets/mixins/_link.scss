@@ -1,0 +1,18 @@
+@mixin link-color($color) {
+  color: $color;
+
+  &:hover {
+    color: darken($color, 8%);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  &:active {
+    color: darken($color, 25%);
+  }
+
+  &:focus {
+    color: darken($color, 25%);
+    text-decoration: none;
+  }
+}

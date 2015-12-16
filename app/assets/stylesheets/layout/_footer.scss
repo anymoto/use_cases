@@ -1,9 +1,10 @@
 footer {
-  font-size: 1.2rem;
   margin: 4rem 0;
 }
 
 .footer-link {
-  color: $silver;
+  @include link-color($silver);
+  font-size: 1.2rem;
+  display: inline-block;
   margin-right: 2rem;
 }

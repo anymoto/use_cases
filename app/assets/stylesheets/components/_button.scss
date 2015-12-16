@@ -1,34 +1,21 @@
-.js-upload-button {
-  background-color: $abbey;
+.btn {
+  border: none;
   border-radius: 4px;
   display: inline-block;
   color: $white;
   font-size: 1.2rem;
   padding: 1.2rem 3rem;
+}
 
-  &:hover, &:focus {
-    color: $white;
-    background-color: darken($abbey, 15%);
-    text-decoration: none;
-  }
+.js-upload-button {
+  @include button-bg($abbey);
 }
 
 .js-submit-form-button {
-  background-color: $cerulean;
-  border: none;
-  border-radius: 4px;
-  color: $white;
-  font-size: 1.2rem;
-  padding: 0.8rem 3rem;
+  @include button-bg($cerulean);
+}
 
-  &:hover, &:focus {
-    background-color: darken($cerulean, 15%);
-    color: $white;
-    text-decoration: none;
-  }
-
-  &.disabled {
-    background-color: $hawkes-blue;
-    cursor: default;
-  }
+.js-submit-form-button.disabled {
+  @include button-bg($hawkes-blue);
+  cursor: default;
 }
