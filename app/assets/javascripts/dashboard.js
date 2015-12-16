@@ -8,6 +8,15 @@ window.Dashboard = function() {
         e.target.innerHTML = 'See more';
       }
     });
-    $('.caret').toggleClass('up');
+    $('.js-caret').toggleClass('up');
+  });
+
+  $('.use-case-link').click(function(e){
+    e.preventDefault();
+    return false;
+  });
+
+  $('.link').click(function(e) {
+    e.preventDefault();
   });
 };
